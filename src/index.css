@@ -109,6 +109,40 @@ body {
   cursor: pointer;
 }
 
+.container-header-bottom .search-container .cart-link:hover {
+  color: #ddd;
+}
+
 .container-header-bottom .search-container .cart-link .cart-quantity {
   margin-left: .5rem;
+}
+
+nav {
+  background-color: #650081;
+  padding: .7rem;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #ddd;
+}
+
+.whatsapp-container {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
 }
