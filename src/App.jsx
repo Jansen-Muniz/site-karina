@@ -87,6 +87,37 @@ const App = () => (
         <NavItems />
       </NavBar>
     </nav>
+    <main>
+      <div className="banner-container">
+        <div className="banner-item">
+          <div>
+            <img src="img/entrega.webp" alt="ícone entrega" />
+          </div>
+          <div className="text-container">
+            <span className="tittle-banner">Entrega em todo Brasil</span>
+            <span className="text-banner">Garanta agora o seu pedido</span>
+          </div>
+        </div>
+        <div className="banner-item">
+          <div>
+            <img src="img/parcelamento.webp" alt="ícone parcelamento" />
+          </div>
+          <div className="text-container">
+            <span className="tittle-banner">Parcele em até 10x</span>
+            <span className="text-banner">Nos cartões de crédito</span>
+          </div>
+        </div>
+        <div className="banner-item">
+          <div>
+            <img src="img/site-seguro.webp" alt="ícone site seguro" />
+          </div>
+          <div className="text-container">
+            <span className="tittle-banner">Site 100% Seguro</span>
+            <span className="text-banner">Seus dados protegidos!</span>
+          </div>
+        </div>
+      </div>
+    </main>
 
     <div className="whatsapp-container">
       <a href="https://api.whatsapp.com/send?phone=5511979814476" target="blank">

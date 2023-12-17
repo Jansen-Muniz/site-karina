@@ -146,3 +146,29 @@ nav ul li a:hover {
   bottom: 15px;
   right: 15px;
 }
+
+main .banner-container{
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  justify-content: space-around;
+}
+
+main .banner-container .banner-item{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+main .banner-container .text-container{
+  display: flex;
+  flex-direction: column;  
+}
+
+main .banner-container .text-container .tittle-banner{
+  font-weight: bold;
+}
+
+main .banner-container .text-container .text-banner{
+  color: #aaa;
+}
