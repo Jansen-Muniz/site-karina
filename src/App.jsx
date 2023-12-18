@@ -60,17 +60,47 @@ const HeaderBottomContent = () => (
 
 const NavItems = () => (
   <>
-    <li><a href="#">ITEM</a></li>
-    <li><a href="#">ITEM</a></li>
-    <li><a href="#">ITEM</a></li>
-    <li><a href="#">ITEM</a></li>
-    <li><a href="#">ITEM</a></li>
+    <li><a href="#">categorias</a></li>
+    <li><a href="#">lançamento</a></li>
+    <li><a href="#">presentes</a></li>
   </>
 )
 
 const HeaderBottom = ({ children }) => <div className="container-header-bottom">{children}</div>
 const HeaderInfoTop = ({ children }) => <div className="container-info-top">{children}</div>
 const NavBar = ({ children }) => <ul>{children}</ul>
+
+const bannerItems = [
+  {
+    id: crypto.randomUUID(),
+    imgUrl: 'img/entrega.webp',
+    alt: 'ícone entrega',
+    titleBanner: 'Entrega em todo Brasil',
+    textBanner: 'Garanta agora o seu pedido'
+  },
+  {
+    id: crypto.randomUUID(),
+    imgUrl: 'img/parcelamento.webp',
+    alt: 'ícone parcelamento',
+    titleBanner: 'Parcele em até 10x',
+    textBanner: 'Nos cartões de crédito'
+  },
+  {
+    id: crypto.randomUUID(),
+    imgUrl: 'img/site-seguro.webp',
+    alt: 'ícone site seguro',
+    titleBanner: 'Site 100% Seguro',
+    textBanner: 'Seus dados protegidos!'
+  },
+  {
+    id: crypto.randomUUID(),
+    imgUrl: 'img/desconto.webp',
+    alt: 'ícone desconto',
+    titleBanner: 'Desconto na 1ª Compra',
+    textBanner: 'Use o cupom X'
+  }
+]
+
 
 const App = () => (
   <>
@@ -89,33 +119,19 @@ const App = () => (
     </nav>
     <main>
       <div className="banner-container">
-        <div className="banner-item">
-          <div>
-            <img src="img/entrega.webp" alt="ícone entrega" />
-          </div>
-          <div className="text-container">
-            <span className="tittle-banner">Entrega em todo Brasil</span>
-            <span className="text-banner">Garanta agora o seu pedido</span>
-          </div>
-        </div>
-        <div className="banner-item">
-          <div>
-            <img src="img/parcelamento.webp" alt="ícone parcelamento" />
-          </div>
-          <div className="text-container">
-            <span className="tittle-banner">Parcele em até 10x</span>
-            <span className="text-banner">Nos cartões de crédito</span>
-          </div>
-        </div>
-        <div className="banner-item">
-          <div>
-            <img src="img/site-seguro.webp" alt="ícone site seguro" />
-          </div>
-          <div className="text-container">
-            <span className="tittle-banner">Site 100% Seguro</span>
-            <span className="text-banner">Seus dados protegidos!</span>
-          </div>
-        </div>
+        <ul>
+          {bannerItems.map((item) => (
+            <li key={item.id} className="banner-item">
+              <div>
+                <img src={item.imgUrl} alt={item.alt} />
+              </div>
+              <div className="text-container">
+                <span className="tittle-banner">{item.titleBanner}</span>
+                <span className="text-banner">{item.textBanner}</span>
+              </div>
+            </li>
+          ))}
+        </ul>
       </div>
     </main>
 

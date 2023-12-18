@@ -135,6 +135,7 @@ nav ul li a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
+  text-transform: uppercase;
 }
 
 nav ul li a:hover {
@@ -147,7 +148,7 @@ nav ul li a:hover {
   right: 15px;
 }
 
-main .banner-container{
+main .banner-container ul{
   display: flex;
   align-items: center;
   padding: 2rem;
