@@ -58,17 +58,17 @@ const HeaderBottomContent = () => (
   </>
 )
 
-const NavItems = () => (
-  <>
-    <li><a href="#">categorias</a></li>
-    <li><a href="#">lançamento</a></li>
-    <li><a href="#">presentes</a></li>
-  </>
-)
-
 const HeaderBottom = ({ children }) => <div className="container-header-bottom">{children}</div>
 const HeaderInfoTop = ({ children }) => <div className="container-info-top">{children}</div>
-const NavBar = ({ children }) => <ul>{children}</ul>
+const NavBar = () => {
+  return (
+    <ul>
+      <li><a href="#">categorias</a></li>
+      <li><a href="#">lançamento</a></li>
+      <li><a href="#">presentes</a></li>
+    </ul>
+  )
+}
 
 const bannerItems = [
   {
@@ -101,7 +101,6 @@ const bannerItems = [
   }
 ]
 
-
 const App = () => (
   <>
     <header>
@@ -113,9 +112,7 @@ const App = () => (
       </HeaderBottom>
     </header>
     <nav>
-      <NavBar>
-        <NavItems />
-      </NavBar>
+      <NavBar />
     </nav>
     <main>
       <div className="banner-container">
